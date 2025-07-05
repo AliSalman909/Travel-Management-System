@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{070A06EB-2E81-4D71-8237-031F4B32B781}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TravelEaseDB</RootNamespace>
+    <AssemblyName>TravelEaseDB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>C:\Users\ALLEN PROGRAMMER\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface.Designer.cs">
+      <DependentUpon>AdminInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationRequests.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationRequests.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProviderInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceProviderInterface.Designer.cs">
+      <DependentUpon>ServiceProviderInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignINForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignINForm.Designer.cs">
+      <DependentUpon>SignINForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppUser.Designer.cs">
+      <DependentUpon>AppUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSignUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSignUP.Designer.cs">
+      <DependentUpon>AdminSignUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourOperatorInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourOperatorInterface.Designer.cs">
+      <DependentUpon>TourOperatorInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourOperatorSignUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourOperatorSignUP.Designer.cs">
+      <DependentUpon>TourOperatorSignUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProviderSignUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceProviderSignUP.Designer.cs">
+      <DependentUpon>ServiceProviderSignUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TravelEaseDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravelEaseDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TravelerInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelerInterface.Designer.cs">
+      <DependentUpon>TravelerInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravelerSignUPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelerSignUPForm.Designer.cs">
+      <DependentUpon>TravelerSignUPForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AbandonedBookingAnalysisReport.rdlc" />
+    <EmbeddedResource Include="AdminInterface.resx">
+      <DependentUpon>AdminInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DestinationBookingInsightsReport.rdlc" />
+    <EmbeddedResource Include="PlatformGrowthReport.rdlc" />
+    <EmbeddedResource Include="ServiceProviderEfficiencyReport.rdlc" />
+    <EmbeddedResource Include="TourOperatorReport.rdlc" />
+    <EmbeddedResource Include="TravelerDemographicsAndPreferencesReport.rdlc" />
+    <EmbeddedResource Include="TripBookingRevenueReport.rdlc" />
+    <EmbeddedResource Include="ServiceProviderInterface.resx">
+      <DependentUpon>ServiceProviderInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignINForm.resx">
+      <DependentUpon>SignINForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppUser.resx">
+      <DependentUpon>AppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSignUP.resx">
+      <DependentUpon>AdminSignUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.rdlc" />
+    <EmbeddedResource Include="TourOperatorInterface.resx">
+      <DependentUpon>TourOperatorInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourOperatorSignUP.resx">
+      <DependentUpon>TourOperatorSignUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceProviderSignUP.resx">
+      <DependentUpon>ServiceProviderSignUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TravelerInterface.resx">
+      <DependentUpon>TravelerInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelerSignUPForm.resx">
+      <DependentUpon>TravelerSignUPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\AdminInterface.AbandonmentRate.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.ActiveUser.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.CancellationReason.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.CategoryPreference.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.DestinationBooking.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.DestinationPopularity.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.DestinationSatisfaction.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.GuideRating.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.HotelBooking.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.MonthlyBookingTrend.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.NationalityDistribution.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.NewDestination.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.NewTourOperator.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.NewUserRegistration.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.OverallSpending.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.PotentialRevenueLoss.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.RecoveryRate.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.TotalBookings.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.TourOperatorRating.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.TourOperatorResponseTime.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.TourOperatorRevenue.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.TravelerSpending.datasource" />
+    <None Include="Properties\DataSources\AdminInterface.YearlyBookingTrend.datasource" />
+    <None Include="Properties\DataSources\TravelerInterface.TicketData.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RegistrationRequests.xsc">
+      <DependentUpon>RegistrationRequests.xsd</DependentUpon>
+    </None>
+    <None Include="RegistrationRequests.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegistrationRequests.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegistrationRequests.xss">
+      <DependentUpon>RegistrationRequests.xsd</DependentUpon>
+    </None>
+    <None Include="TravelEaseDBDataSet.xsc">
+      <DependentUpon>TravelEaseDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TravelEaseDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TravelEaseDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TravelEaseDBDataSet.xss">
+      <DependentUpon>TravelEaseDBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
